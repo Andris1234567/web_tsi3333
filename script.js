@@ -4,15 +4,15 @@ $(document).ready(function () {
     // Sākuma baneru saturs
     const slides = [
         {
-            title: "JUST DO IT.",
+            title: "JUST DO IT TMORROW.",
             text: "Katrs liels sasniegums sākas ar pirmo soli."
         },
         {
-            title: "ATTĪSTI SEVI",
+            title: "NEATTĪSTI SEVI",
             text: "Mācies šodien, lai rīt būtu labāks."
         },
         {
-            title: "NEPADODIES",
+            title: "PADODIES",
             text: "Tava neatlaidība veido tavu nākotni."
         }
     ];
