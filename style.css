@@ -13,7 +13,7 @@ body {
     margin: 0;
     background: #111512;
     color: #f4f5ef;
-    font-family: Poppins, Arial, sans-serif;
+    font-family: 'Orbitron', Arial, sans-serif;
     line-height: 1.7;
 }
 
@@ -107,7 +107,7 @@ button {
     color: #111512;
     border: 0;
     padding: 13px 22px;
-    font: 600 14px Poppins, Arial, sans-serif;
+    font: 600 14px 'Orbitron', Arial, sans-serif;
     cursor: pointer;
     border-radius: 4px;
 }
