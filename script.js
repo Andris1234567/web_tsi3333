@@ -1,92 +1,136 @@
 
 $(document).ready(function () {
 
-    // 1. ANIMĀCIJA - fadeIn()
-    // Sākuma teksta pakāpeniska parādīšanās.
-
-    $('#heroText').hide().fadeIn(1200);
-
-
-    // 2. ANIMĀCIJA - slideToggle()
-    // Karjeras padomu atvēršana un aizvēršana.
-
-    $('.toggle').click(function () {
-
-        const open = $(this).attr('aria-expanded') === 'true';
-
-        $(this).attr('aria-expanded', String(!open));
-
-        $(this).text(open ? 'Lasīt vairāk +' : 'Aizvērt −');
-
-        $(this).next('.tip').stop(true, true).slideToggle(400);
-
-    });
-
-
-    // 3. ANIMĀCIJA - animate()
-    // Prasmju progresa joslu animācija.
-
-    $('#progress').click(function () {
-
-        $('.bar').each(function () {
-
-            $(this).stop(true).css('width', '0').animate({
-
-                width: $(this).data('width')
-
-            }, 1200);
-
-        });
-
-    });
-
-
-    // Motivācijas citātu masīvs.
-
-    const quotes = [
-
-        '“Negaidi ideālo brīdi. Sāc ar to, kas tev ir.”',
-
-        '“Mazs solis šodien ir lielu pārmaiņu sākums.”',
-
-        '“Tavas prasmes aug ar katru mēģinājumu.”',
-
-        '“Kļūdas ir daļa no ceļa uz panākumiem.”'
-
+    // Sākuma baneru saturs
+    const slides = [
+        {
+            title: "JUST DO IT.",
+            text: "Katrs liels sasniegums sākas ar pirmo soli."
+        },
+        {
+            title: "ATTĪSTI SEVI",
+            text: "Mācies šodien, lai rīt būtu labāks."
+        },
+        {
+            title: "NEPADODIES",
+            text: "Tava neatlaidība veido tavu nākotni."
+        }
     ];
 
-    let index = 0;
+    let current = 0;
+
+    // 1. un 2. efekts - fadeOut un fadeIn
+    function changeSlide() {
+
+        $("#heroText").fadeOut(600, function () {
+
+            current = (current + 1) % slides.length;
+
+            $("#heroText h1").text(slides[current].title);
+
+            $(".intro").text(slides[current].text);
+
+            $("#heroText").fadeIn(600);
+
+        });
+
+    }
+
+    // Automātiska baneru maiņa ik pēc 6 sekundēm
+    setInterval(changeSlide, 6000);
 
 
-    // 4. ANIMĀCIJA - fadeOut()
-    // Iepriekšējā motivācijas citāta pazušana.
+    // 3. efekts - slideToggle
+    $(".toggle").click(function () {
 
-    $('#newQuote').click(function () {
+        $(this).next(".tip").slideToggle(500);
 
-        const button = $(this).prop('disabled', true);
+    });
 
-        $('#quote').fadeOut(300, function () {
 
-            index = (index + 1) % quotes.length;
+    // 4. efekts - slideDown
+    $(".cards article").hide();
 
-            $(this).text(quotes[index]).fadeIn(400, function () {
+    $(window).on("scroll", function () {
 
-                button.prop('disabled', false);
+        if ($(window).scrollTop() + $(window).height()
+            > $("#padomi").offset().top + 100) {
 
-            });
+            $(".cards article").slideDown(800);
+
+        }
+
+    });
+
+    $("#start").click(function () {
+
+        $("#message").slideDown(700);
+
+    });
+
+
+    // 5. efekts - animate
+    $(".cards article").hover(
+
+        function () {
+
+            $(this).stop(true).animate({
+                top: "-10px"
+            }, 250);
+
+        },
+
+        function () {
+
+            $(this).stop(true).animate({
+                top: "0px"
+            }, 250);
+
+        }
+
+    );
+
+
+    // Papildu progresa joslu animācija
+    $("#progress").click(function () {
+
+        $(".bar").each(function () {
+
+            $(this).css("width", "0").animate({
+
+                width: $(this).data("width")
+
+            }, 1500);
 
         });
 
     });
 
 
-    // 5. ANIMĀCIJA - slideDown()
-    // Motivācijas ziņojuma parādīšanās.
+    // Motivācijas citātu maiņa
+    const quotes = [
+        "Tava nākotne sākas šodien.",
+        "Nekad nepārstāj mācīties.",
+        "Panākumi sākas ar drosmi.",
+        "Tikai tu vari mainīt savu nākotni."
+    ];
 
-    $('#start').click(function () {
+    let quoteIndex = 0;
 
-        $('#message').stop(true, true).slideDown(500);
+    $("#newQuote").click(function () {
+
+        $("#quote").fadeOut(400, function () {
+
+            quoteIndex = (quoteIndex + 1) % quotes.length;
+
+            $(this).text(quotes[quoteIndex]).fadeIn(500);
+
+        });
 
     });
+
+    // Pārbaude pārlūkprogrammas konsolē
+    console.log("jQuery darbojas!");
+    console.log("jQuery versija: " + $.fn.jquery);
 
 });

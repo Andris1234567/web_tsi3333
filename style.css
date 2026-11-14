@@ -311,3 +311,100 @@ footer span {
     }
 
 }
+
+/* Star Wars stila dizains */
+
+body {
+    background: #080b12;
+    color: white;
+    font-family: 'Orbitron', Arial, sans-serif;
+}
+
+header {
+    background: #050505;
+    border-bottom: 1px solid #333;
+}
+
+.hero {
+    background: radial-gradient(
+        ellipse at right bottom,
+        #263c60,
+        #101725,
+        #080b12
+    );
+}
+
+h1 {
+    color: #ffdf65;
+    font-size: clamp(40px, 7vw, 90px);
+    line-height: 1.1;
+    letter-spacing: 2px;
+    text-shadow: 0 0 25px #ffdf6540;
+}
+
+.logo span,
+em,
+.eyebrow,
+.number {
+    color: #ffdf65;
+}
+
+button {
+    font-family: 'Orbitron', Arial, sans-serif;
+    background: #ffdf65;
+    color: black;
+    border-radius: 25px;
+    padding: 14px 25px;
+}
+
+button:hover {
+    background: white;
+    box-shadow: 0 0 20px #ffdf6580;
+}
+
+.cards article {
+    position: relative;
+    top: 0;
+    background: #151c2b;
+    border: 1px solid #343e50;
+    border-radius: 10px;
+    transition: box-shadow 0.3s;
+}
+
+.cards article:hover {
+    border-color: #ffdf65;
+    box-shadow: 0 0 25px #ffdf6530;
+}
+
+.toggle {
+    background: transparent;
+    color: #ffdf65;
+}
+
+.bar {
+    background: #ffdf65;
+}
+
+.quote-box {
+    background: #151c2b;
+    border: 1px solid #343e50;
+    border-radius: 10px;
+}
+
+#message,
+.tip {
+    color: #ffdf65;
+}
+
+.hero-art {
+    background: #101725;
+    border: 1px solid #343e50;
+}
+
+.links a:hover {
+    color: #ffdf65;
+}
+
+.hero-art svg path {
+    stroke: #ffdf65;
+}
