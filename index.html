@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="lv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Just do it | Tava karjera</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS fails -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery bibliotēka -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+
+    <!-- JavaScript fails -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigācijas izvēlne -->
+    <header>
+        <nav class="wrap">
+            <a class="logo" href="#sakums">
+                JUST<span>DO IT.</span>
+            </a>
+
+            <div class="links">
+                <a href="#sakums">Sākums</a>
+                <a href="#padomi">Padomi</a>
+                <a href="#prasmes">Prasmes</a>
+                <a href="#motivacija">Motivācija</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Sākuma sadaļa -->
+        <section id="sakums" class="hero wrap">
+
+            <div id="heroText">
+
+                <p class="eyebrow">
+                    01 / TAVS CEĻŠ UZ PANĀKUMIEM
+                </p>
+
+                <h1>Just<br>do <em>it.</em></h1>
+
+                <p class="intro">
+                    Tava nākotne sākas ar vienu drosmīgu soli.
+                    Attīsti prasmes, izvēlies savu virzienu
+                    un pārvērt mērķus realitātē.
+                </p>
+
+                <button id="start">Sāc šodien →</button>
+
+                <p id="message" role="status">
+                    Izvēlies vienu mazu mērķi un sper
+                    pirmo soli jau šodien!
+                </p>
+
+            </div>
+
+            <!-- Grafiskais elements -->
+            <div class="hero-art" aria-hidden="true">
+
+                <svg viewBox="0 0 400 400">
+
+                    <circle cx="200" cy="200" r="175"
+                        fill="none" stroke="#ffffff22"/>
+
+                    <circle cx="200" cy="200" r="135"
+                        fill="none" stroke="#ffffff22"/>
+
+                    <path d="M50 330 L150 245 L205 275 L340 100
+                        M260 100 H340 V180"
+                        fill="none"
+                        stroke="#d9fa52"
+                        stroke-width="24"
+                        stroke-linecap="square"
+                        stroke-linejoin="miter"/>
+
+                </svg>
+
+                <span>START / GROW / SUCCEED</span>
+
+            </div>
+
+        </section>
+
+        <!-- Karjeras padomu sadaļa -->
+        <section id="padomi" class="section wrap">
+
+            <p class="eyebrow">02 / RĪCĪBAS PLĀNS</p>
+
+            <h2>Trīs soļi uz panākumiem</h2>
+
+            <div class="cards">
+
+                <article>
+
+                    <span class="number">01</span>
+
+                    <h3>Nosaki mērķi</h3>
+
+                    <p>
+                        Izvēlies karjeras virzienu,
+                        kas tevi patiesi interesē.
+                    </p>
+
+                    <button class="toggle"
+                        aria-expanded="false"
+                        aria-controls="tip1">
+                        Lasīt vairāk +
+                    </button>
+
+                    <p id="tip1" class="tip">
+                        Pieraksti savu mērķi un nosaki termiņu.
+                        Sadali to mazos, sasniedzamos uzdevumos.
+                    </p>
+
+                </article>
+
+                <article>
+
+                    <span class="number">02</span>
+
+                    <h3>Attīsti prasmes</h3>
+
+                    <p>
+                        Mācies katru dienu un izmanto
+                        zināšanas praksē.
+                    </p>
+
+                    <button class="toggle"
+                        aria-expanded="false"
+                        aria-controls="tip2">
+                        Lasīt vairāk +
+                    </button>
+
+                    <p id="tip2" class="tip">
+                        Velti 30 minūtes dienā jaunai prasmei.
+                        Veido projektus un apkopo tos savā portfolio.
+                    </p>
+
+                </article>
+
+                <article>
+
+                    <span class="number">03</span>
+
+                    <h3>Nepadodies</h3>
+
+                    <p>
+                        Uztver kļūdas kā iespēju augt
+                        un kļūt labākam.
+                    </p>
+
+                    <button class="toggle"
+                        aria-expanded="false"
+                        aria-controls="tip3">
+                        Lasīt vairāk +
+                    </button>
+
+                    <p id="tip3" class="tip">
+                        Regulāri izvērtē paveikto, lūdz atsauksmes
+                        un pielāgo savu plānu.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Prasmju attīstības sadaļa -->
+        <section id="prasmes" class="section wrap">
+
+            <p class="eyebrow">03 / IZAUGSME</p>
+
+            <h2>Attīsti savu potenciālu</h2>
+
+            <p>
+                Ilustratīvs prasmju attīstības plāns.
+                Nospied pogu, lai redzētu plānoto progresu.
+            </p>
+
+            <div class="skills">
+
+                <div class="skill">
+
+                    <div>Komunikācija <span>80%</span></div>
+
+                    <div class="track">
+                        <div class="bar" data-width="80%"></div>
+                    </div>
+
+                </div>
+
+                <div class="skill">
+
+                    <div>
+                        Profesionālās zināšanas <span>90%</span>
+                    </div>
+
+                    <div class="track">
+                        <div class="bar" data-width="90%"></div>
+                    </div>
+
+                </div>
+
+                <div class="skill">
+
+                    <div>Laika plānošana <span>75%</span></div>
+
+                    <div class="track">
+                        <div class="bar" data-width="75%"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button id="progress">Parādīt progresu</button>
+
+        </section>
+
+        <!-- Motivācijas citātu sadaļa -->
+        <section id="motivacija" class="section wrap">
+
+            <div class="quote-box">
+
+                <p class="eyebrow">
+                    04 / IKDIENAS MOTIVĀCIJA
+                </p>
+
+                <h2>Vārdi, kas iedvesmo</h2>
+
+                <blockquote id="quote" aria-live="polite">
+                    “Negaidi ideālo brīdi. Sāc ar to, kas tev ir.”
+                </blockquote>
+
+                <button id="newQuote">
+                    Nākamais citāts →
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Mājaslapas kājene -->
+    <footer class="wrap">
+        JUST DO IT.
+        <span>Karjeras motivācijas mācību projekts</span>
+    </footer>
+
+</body>
+</html>
